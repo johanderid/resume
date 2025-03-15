@@ -61,7 +61,7 @@ export function About() {
             <div className="relative">
               <div className="glass-panel bg-gray-700/80 border-gray-600 rounded-2xl overflow-hidden shadow-xl">
                 <div className="aspect-square w-full bg-gray-700 rounded-2xl">
-                  {/* Profile image placeholder - replace with your own image */}
+                  {resume/public/Resume_Photo.jpeg}
                   <div className="w-full h-full flex items-center justify-center text-gray-400">
                     <svg className="w-20 h-20" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
