@@ -49,7 +49,7 @@ export function Hero() {
           </div>
           
           <h1 className="text-5xl md:text-7xl font-display font-bold tracking-tight mb-6 animate-fade-in" style={{ animationDelay: '0.2s' }}>
-            <span className="text-gradient">Your Name</span>
+            <span className="text-gradient">Johan de Ridder</span>
           </h1>
           
           <p className="text-xl md:text-2xl text-gray-400 mb-10 animate-fade-in" style={{ animationDelay: '0.4s' }}>

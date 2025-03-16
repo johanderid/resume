@@ -11,18 +11,27 @@ type ExperienceItem = {
 
 const experienceData: ExperienceItem[] = [
   {
-    title: 'Senior Frontend Developer',
-    company: 'Company A',
-    period: 'Jan 2021 - Present',
-    description: 'Led the frontend development team in building a scalable and responsive web application. Implemented modern React patterns and optimized performance for a better user experience.',
-    skills: ['React', 'TypeScript', 'Next.js', 'GraphQL', 'Tailwind CSS']
+    title: 'Cloud Engineer',
+    company: 'KEMBIT',
+    period: 'July 2023 - February 2025',
+    description: 'Optimized and managed Microsoft Azure cloud environments to enhance performance, scalability, and cost-efficiency while ensuring high availability and operational 
+    resilience. Enforced security and compliance through vulnerability scans, system hardening, and robust identity management using Azure Active Directory, implementing multi-factor 
+    authentication (MFA) with conditional access policies. Configured and maintained virtual networks, VPNs, and cloud tools like Office 365, Teams, and Exchange Online to support 
+    seamless connectivity and productivity. Managed all aspects of Microsoft Intune for device management and compliance, leveraged Microsoft Defender to protect emails and endpoints, 
+    and maintained Azure Virtual Desktop solutions for secure remote access. Oversaw Windows Server ecosystems and collaborated on scalable cloud solutions, proactively upgrading 
+    systems to minimize downtime and adapt to evolving business needs.',
+    skills: ['Azure', 'Microsoft 365', 'Intune', 'Azure Virtual Desktop', 'Microsoft Entra ID', 'Active Directory', 'Windows Server', 'Microsoft Defender']
   },
   {
-    title: 'Frontend Developer',
-    company: 'Company B',
-    period: 'Mar 2018 - Dec 2020',
-    description: 'Developed and maintained multiple client-facing web applications. Collaborated with UX designers to implement responsive designs and ensure cross-browser compatibility.',
-    skills: ['JavaScript', 'React', 'Redux', 'SCSS', 'Jest']
+    title: 'Cloud Infrastructure Consultant',
+    company: 'Netsurit',
+    period: 'April 2019 - June 2023',
+    description: 'Delivered expert guidance on Azure, Microsoft 365, Intune, and SCCM, implementing cloud infrastructure and modern device management solutions for small, medium, and 
+    enterprise clients. Collaborated with pre-sales teams to scope projects and define technical requirements, leading the execution of requirements analysis, deployment, and upgrades 
+    for cloud and hybrid solutions. Facilitated client workshops to align technology with business needs and drove the adoption of modern workplace technologies to enhance productivity. 
+    Managed project implementation from start to finish, ensuring seamless delivery, and provided troubleshooting support for issues in Azure, Intune, and Microsoft 365 environments. 
+    Performed quality assurance to maintain high-quality outcomes and authored detailed documentation to support ongoing operations.',
+    skills: ['Azure', 'Microsoft 365', 'Intune', 'Azure Virtual Desktop','Configuration Manager']
   },
   {
     title: 'Junior Web Developer',
