@@ -14,31 +14,36 @@ const experienceData: ExperienceItem[] = [
     title: 'Cloud Engineer',
     company: 'KEMBIT',
     period: 'July 2023 - February 2025',
-    description: 'Optimized and managed Microsoft Azure cloud environments to enhance performance, scalability, and cost-efficiency while ensuring high availability and operational 
+    description: `Optimized and managed Microsoft Azure cloud environments to enhance performance, scalability, and cost-efficiency while ensuring high availability and operational 
     resilience. Enforced security and compliance through vulnerability scans, system hardening, and robust identity management using Azure Active Directory, implementing multi-factor 
     authentication (MFA) with conditional access policies. Configured and maintained virtual networks, VPNs, and cloud tools like Office 365, Teams, and Exchange Online to support 
     seamless connectivity and productivity. Managed all aspects of Microsoft Intune for device management and compliance, leveraged Microsoft Defender to protect emails and endpoints, 
     and maintained Azure Virtual Desktop solutions for secure remote access. Oversaw Windows Server ecosystems and collaborated on scalable cloud solutions, proactively upgrading 
-    systems to minimize downtime and adapt to evolving business needs.',
+    systems to minimize downtime and adapt to evolving business needs.`,
     skills: ['Azure', 'Microsoft 365', 'Intune', 'Azure Virtual Desktop', 'Microsoft Entra ID', 'Active Directory', 'Windows Server', 'Microsoft Defender']
   },
   {
     title: 'Cloud Infrastructure Consultant',
     company: 'Netsurit',
     period: 'April 2019 - June 2023',
-    description: 'Delivered expert guidance on Azure, Microsoft 365, Intune, and SCCM, implementing cloud infrastructure and modern device management solutions for small, medium, and 
+    description: `Delivered expert guidance on Azure, Microsoft 365, Intune, and SCCM, implementing cloud infrastructure and modern device management solutions for small, medium, and 
     enterprise clients. Collaborated with pre-sales teams to scope projects and define technical requirements, leading the execution of requirements analysis, deployment, and upgrades 
     for cloud and hybrid solutions. Facilitated client workshops to align technology with business needs and drove the adoption of modern workplace technologies to enhance productivity. 
     Managed project implementation from start to finish, ensuring seamless delivery, and provided troubleshooting support for issues in Azure, Intune, and Microsoft 365 environments. 
-    Performed quality assurance to maintain high-quality outcomes and authored detailed documentation to support ongoing operations.',
+    Performed quality assurance to maintain high-quality outcomes and authored detailed documentation to support ongoing operations.`,
     skills: ['Azure', 'Microsoft 365', 'Intune', 'Azure Virtual Desktop','Configuration Manager']
   },
   {
-    title: 'Junior Web Developer',
-    company: 'Company C',
-    period: 'Jun 2016 - Feb 2018',
-    description: 'Assisted in the development of web applications and implemented UI components based on design specifications. Learned and applied best practices for web development.',
-    skills: ['HTML', 'CSS', 'JavaScript', 'jQuery', 'Bootstrap']
+    title: 'Software Distribution Technical Specialist',
+    company: 'T-Systems South Africa',
+    period: 'November 2011 - June 2017, May 2018 - March 2019',
+    description: `Served as a senior technical specialist overseeing Microsoft System Center Configuration Manager (SCCM) environments, managing workspace solutions for clients with 
+    large-scale ecosystems (22,000 and 37,000 endpoints) and smaller deployments (under 2,000 endpoints). Created, tested, and deployed Windows OS images, collaborating with third-party 
+    suppliers to certify hardware and ensure pre-loaded devices shipped with current software. Acted as the L3 escalation point for complex SCCM-related issues, performing Root Cause 
+    Analysis (RCA) and resolving technical challenges to maintain SCCM in optimal working order. Assisted L2 engineers with monthly patch compliance efforts, contributing to security 
+    and system stability. Developed custom SCCM reports for clients, providing tailored insights to meet their operational needs, and leveraged deep expertise to optimize workspace 
+    solutions and support operational excellence across diverse environments.`,
+    skills: ['SCCM', 'Windows Server', 'WSUS', 'SQL Server', 'Windows 7 and 10']
   }
 ];
 
