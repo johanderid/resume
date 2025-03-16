@@ -12,45 +12,150 @@ type Project = {
 const projectsData: Project[] = [
   {
     id: 1,
-    title: 'Enterprise Azure Migration',
-    description: 'Designed and implemented a comprehensive migration of on-premises infrastructure to Azure.',
-    extendedDescription: 'This project involved assessing over 50 legacy servers, migrating critical workloads to Azure IaaS, optimizing resource utilization with auto-scaling groups, and implementing Azure Security Center for continuous monitoring. Reduced infrastructure costs by 30% and improved uptime to 99.99%.',
-    tags: ['Azure', 'Cloud Migration', 'IaaS', 'Security'],
+    title: 'Azure Workload Migration and Optimization',
+    description: 'Led a year-long initiative to migrate on-premises workloads to Azure, optimizing infrastructure for performance and scalability.',
+    extendedDescription: 'Spearheaded a comprehensive lift-and-shift migration of critical workloads to Azure, transitioning select applications to PaaS and SaaS models where feasible. Reviewed and troubleshooted configurations using Azure Policies, fine-tuned network setups, and established secure landing zones to support operational continuity. Provided actionable insights for infrastructure optimization, ensuring cost-efficiency and robust performance across a hybrid cloud environment.',
+    tags: ['Azure', 'Cloud Migration', 'IaaS', 'PaaS', 'Security'],
   },
   {
     id: 2,
-    title: 'Modern Workplace Transformation',
-    description: 'Led the deployment of Microsoft 365 suite with advanced security configurations.',
-    extendedDescription: 'Deployed Microsoft 365 for 1,000+ users, configured Entra ID with SSO and MFA, integrated Teams with custom workflows, and enforced DLP policies. Improved collaboration efficiency by 40% and reduced security incidents by 25%.',
-    tags: ['Microsoft 365', 'Entra ID', 'Teams', 'Security'],
+    title: 'Enterprise Azure Infrastructure Deployment',
+    description: 'Designed and deployed Azure infrastructure for a large-scale workload migration, enhancing application performance and modernization.',
+    extendedDescription: 'Collaborated with application teams to create detailed migration assessments and documentation, planning Azure infrastructure to meet diverse workload needs. Advised on application modernization opportunities and implemented solutions using Azure DevOps and Infrastructure-as-Code (IaC). Configured resource groups, virtual networks, and connectivity options to ensure seamless integration and operational resilience in a cloud-first environment.',
+    tags: ['Azure', 'Cloud Migration', 'IaaS', 'Azure DevOps'],
   },
   {
     id: 3,
-    title: 'Azure Virtual Desktop Implementation',
-    description: 'Architected and deployed a scalable AVD environment to support remote workers.',
-    extendedDescription: 'Built custom golden images with FSLogix for profile management, optimized multi-session hosts for 500 concurrent users, and integrated with Azure AD for secure access. Achieved a 50% reduction in remote desktop deployment time.',
-    tags: ['Azure Virtual Desktop', 'FSLogix', 'Performance', 'Scaling'],
+    title: 'Intune Security and Device Management Review',
+    description: 'Enhanced endpoint security and management through a targeted Intune deployment for Windows devices.',
+    extendedDescription: 'Planned and executed Windows update rings and feature upgrades, alongside device restriction policies for Windows 10/11. Strengthened security by integrating Windows Defender for Endpoint recommendations via Intune policies. Packaged and deployed applications, configured AutoPilot enrollments, and optimized device management workflows to ensure compliance and operational efficiency across a diverse device fleet.',
+    tags: ['Intune', 'Endpoint Management', 'Security','Compliance', 'Windows AutoPilot'],
   },
   {
     id: 4,
-    title: 'Device Management with Intune',
-    description: 'Implemented comprehensive device management solution using Microsoft Intune.',
-    extendedDescription: 'Managed 2,000+ devices with Intune, deployed apps via Company Portal, enforced conditional access policies, and monitored compliance with custom reports. Reduced manual IT interventions by 60%.',
-    tags: ['Intune', 'Endpoint Management', 'Security', 'Compliance'],
+    title: 'Hybrid AutoPilot Deployment',
+    description: 'Implemented Windows AutoPilot for hybrid and cloud-only device enrollment scenarios.',
+    extendedDescription: 'Orchestrated the planning and rollout of Windows AutoPilot, supporting both Hybrid Azure AD and full Azure AD join configurations. Streamlined device provisioning processes, ensuring secure and efficient onboarding of Windows endpoints into a modern management framework, tailored to meet organizational scalability and security requirements.',
+    tags: ['Intune', 'Windows AutoPilot', 'Hybrid Identity', 'Endpoint Management'],
   },
   {
     id: 5,
-    title: 'Azure Security Posture Enhancement',
-    description: 'Conducted thorough assessment of cloud environment with Microsoft Defender.',
-    extendedDescription: 'Implemented Defender for Cloud across 10 subscriptions, set up automated threat detection, hardened VMs with JIT access, and achieved 95% compliance with CIS benchmarks. Reduced attack surface by 70%.',
-    tags: ['Cloud Security', 'Defender for Cloud', 'Compliance', 'Zero Trust'],
+    title: 'Android Enterprise MDM Expansion',
+    description: 'Expanded mobile device management capabilities for Android tablets using Intune.',
+    extendedDescription: 'Designed and implemented Android Enterprise Dedicated Device enrollment for a fleet of tablets, importing and deploying in-house developed applications. Configured detailed compliance policies, configuration profiles, and app management settings to secure and optimize Android, iOS, and iPadOS devices, enhancing operational functionality for end-users.',
+    tags: ['Intune', 'Endpoint Management', 'Compliance', 'Android Enterprise','iOS','Windows','MDM'],
   },
   {
     id: 6,
-    title: 'Hybrid Identity Architecture',
-    description: 'Designed a robust hybrid identity solution with Microsoft Entra ID.',
-    extendedDescription: 'Integrated on-premises AD with Entra ID for 5,000 users, implemented MFA and passwordless authentication, and streamlined access to 20+ SaaS apps via SSO. Cut login-related support tickets by 80%.',
-    tags: ['Entra ID', 'Hybrid Identity', 'Authentication', 'MFA'],
+    title: 'Modern Device Management Assessment',
+    description: 'Conducted a comprehensive review of an existing Intune and Azure AD environment to modernize device management.',
+    extendedDescription: 'Evaluated the configuration of Intune, Azure AD, and Active Directory Domain Services to identify enabled features and gaps. Documented requirements for application packaging, Windows updates, mobile device management, and Group Policy transitions to Intune, delivering a roadmap for a streamlined, modern management solution that improved security and user experience.',
+    tags: ['Intune', 'Entra ID', 'Hybrid Identity', 'Endpoint Management', 'Compliance'],
+  },
+  {
+    id: 7,
+    title: 'Security Enhancement Proofs of Concept',
+    description: 'Delivered innovative security solutions through multiple proof-of-concept implementations.',
+    extendedDescription: 'Presented and implemented proofs of concept for Windows Admin Center, Always-On VPN, and Windows Defender for Endpoint Web Content Filtering. Rolled out device-based Conditional Access policies across all client devices, enhancing security posture and ensuring compliance with Zero Trust principles in a hybrid environment.',
+    tags: ['Security', 'Zero Trust', 'Defender for Endpoint', 'MFA', 'Windows Admin Center', 'Point-to-site VPN']
+  },
+  {
+    id: 8,
+    title: 'Azure Site-to-Site VPN Deployment',
+    description: 'Established secure connectivity between on-premises infrastructure and Azure via a Site-to-Site VPN.',
+    extendedDescription: 'Planned and deployed a Site-to-Site VPN, integrating on-premises networks with Azure to enable secure, reliable data exchange. Configured virtual networks and gateways, ensuring seamless connectivity and operational continuity for hybrid workloads, tailored to meet stringent performance and security standards.',
+    tags: ['Azure', 'Cloud Security', 'Site-to-Site VPN']
+  },
+  {
+    id: 9,
+    title: 'M365 and Azure Workload Migration',
+    description: 'Executed a full-scale migration of workloads and Microsoft 365 services to Azure.',
+    extendedDescription: 'Planned and implemented an Azure Landing Zone with networks, Site-to-Site and Point-to-Site VPNs, and IaaS virtual machines. Configured Azure AD Connect for Hybrid Azure AD join, OneDrive Known Folder Move, and Azure Backup/Site Recovery with test failovers. Rolled out multi-factor authentication, self-service password reset, and Conditional Access policies, enhancing security and productivity across the environment.',
+    tags: ['Azure', 'Microsoft 365', 'Entra ID', 'MFA', 'Cloud Migration', 'IaaS', 'Security','Point-to-site VPN', 'Site-to-Site VPN']
+  },
+  {
+    id: 10,
+    title: 'Data and Infrastructure Migration Assessment',
+    description: 'Conducted Azure Migrate assessments to plan on-premises-to-cloud transitions.',
+    extendedDescription: 'Ran Azure Migrate assessments across multiple environments to evaluate workloads, producing detailed migration plans, Total Cost of Ownership (TCO) calculations, and Azure cost estimates. Delivered actionable documentation to prioritize migrations, aligning technical solutions with business goals for a seamless cloud adoption journey.',
+    tags: ['Azure', 'Cloud Migration', 'IaaS', 'Performance']
+  },
+  {
+    id: 11,
+    title: 'Azure Virtual Desktop Implementation ( Diplomacy)',
+    description: 'Deployed a scalable Azure Virtual Desktop environment with on-premises connectivity.',
+    extendedDescription: 'Planned and implemented an Azure Landing Zone and Azure Virtual Desktop (AVD) solution for 100 users, integrating secure connectivity from on-premises to Azure. Configured AVD to deliver a high-performance remote desktop experience, tailored to support critical operations with robust security and scalability.',
+    tags: ['Azure Virtual Desktop', 'FSLogix', 'Performance', 'Scaling', 'Cloud Security']
+  },
+  {
+    id: 12,
+    title: 'Azure Virtual Desktop and Disaster Recovery',
+    description: 'Rolled out Azure Virtual Desktop with disaster recovery for critical workloads.',
+    extendedDescription: 'Planned and implemented an Azure Landing Zone and Azure Virtual Desktop (AVD) environment for 100 users, alongside Azure Site Recovery for identified workloads. Ensured seamless failover and failback capabilities, delivering a resilient remote desktop solution with optimized performance and security.',
+    tags: ['Azure Virtual Desktop', 'FSLogix', 'Scaling', 'Cloud Security']
+  },
+  {
+    id: 13,
+    title: 'Intune Device Enrollment and Security',
+    description: 'Configured Intune for Windows device management and enhanced endpoint security.',
+    extendedDescription: 'Planned and implemented Intune for Windows device enrollment, onboarded devices to Microsoft Defender for Cloud, and enforced Bitlocker encryption across all endpoints. Streamlined device management workflows, ensuring compliance and robust protection for a diverse device ecosystem.',
+    tags: ['Intune', 'Endpoint Management', 'Security', 'Compliance', 'Bitlocker']
+  },
+  {
+    id: 14,
+    title: 'Azure Landing Zone Implementation',
+    description: 'Established an Azure Landing Zone to enable workload migration to the cloud.',
+    extendedDescription: 'Planned and deployed an Azure Landing Zone with virtual networks, Resource Groups, and Site-to-Site VPN connectivity. Executed a lift-and-shift migration of identified workloads to Azure IaaS, implementing Azure Backup to ensure data protection and operational continuity.',
+    tags: ['Azure', 'IaaS', 'Cloud Migration', 'Site-to-Site VPN', 'Cloud Security']
+  },
+  {
+    id: 15,
+    title: 'Azure Virtual Desktop with Teams Optimization',
+    description: 'Deployed Azure Virtual Desktop with Teams Voice for call center operations.',
+    extendedDescription: 'Planned and implemented an Azure Landing Zone and Azure Virtual Desktop (AVD) environment, integrating Azure Site Recovery for workload resilience. Optimized AVD for Teams Voice functionality, supporting call center agents with a secure, high-performance remote desktop experience.',
+    tags: ['Azure Virtual Desktop', 'FSLogix', 'Teams', "Scaling", 'BCDR']
+  },
+  {
+    id: 16,
+    title: 'Hybrid Security and AVD Implementation',
+    description: 'Enhanced security and deployed Azure Virtual Desktop in a hybrid environment.',
+    extendedDescription: 'Configured Azure Monitor and Azure Sentinel for advanced monitoring, alongside an Azure Virtual Desktop deployment with a Landing Zone. Secured user accounts with Conditional Access policies and established on-premises-to-Azure connectivity, delivering a robust hybrid solution.',
+    tags: ['Azure Virtual Desktop', 'Cloud Security', 'Zero Trust', 'MFA', 'Azure Sentinel', 'Azure Monitor']
+  },
+  {
+    id: 17,
+    title: 'Azure Migration with Advanced Networking',
+    description: 'Executed a lift-and-shift migration with advanced Azure networking features.',
+    extendedDescription: 'Migrated on-premises workloads to Azure, implementing Azure DNS, Front Door, Web Application Firewall, and Application Gateways. Configured Site-to-Site and Point-to-Site VPNs, moved data to storage accounts, set up Key Vaults, and created reporting dashboards with Azure Monitor for operational insights.',
+    tags: ['Azure', 'Cloud Migration', 'IaaS', 'Cloud Security', 'Site-to-Site VPN','Azure Networking']
+  },
+  {
+    id: 18,
+    title: 'Intune and SCCM Co-Management',
+    description: 'Integrated Intune with SCCM for a hybrid device management solution.',
+    extendedDescription: 'Configured co-management between SCCM and Intune, enabling Hybrid Azure AD join and auto-enrollment for workstations. Created Windows 10 images and task sequences for upgrades, built bare-metal images for vendors, and enforced security with Bitlocker and Microsoft Defender for Endpoint.',
+    tags: ['Intune', 'SCCM', 'Hybrid Identity', 'Endpoint Management', 'Security', 'Bitlocker', 'Defender for Endpoint']
+  },
+  {
+    id: 19,
+    title: 'Intune AutoPilot and Device Imaging',
+    description: 'Implemented Intune with AutoPilot and custom device imaging.',
+    extendedDescription: 'Planned and configured Intune for Windows device enrollment, created MDT images for re-imaging, and set up AutoPilot enrollments. Configured OneDrive Known Folder Move, ensuring seamless device provisioning and data migration in a modern management framework.',
+    tags: ['Intune', 'Windows AutoPilot', 'Endpoint Management', 'Microsoft 365', 'MDT']
+  },
+  {
+    id: 20,
+    title: 'M365 Upgrade and Endpoint Security',
+    description: 'Upgraded endpoints to Windows 10 and Office 365 with enhanced security.',
+    extendedDescription: 'Upgraded devices from Windows 7 to Windows 10 using SCCM, created bare-metal builds for vendors, and deployed Office 365. Configured OneDrive Known Folder Move and onboarded devices to Windows Defender for Endpoint, ensuring a secure and productive environment.',
+    tags: ['Microsoft 365', 'SCCM', 'Endpoint Management', 'Security','Windows Defender']
+  },
+  {
+    id: 21,
+    title: 'M365 Deployment with Teams',
+    description: 'Rolled out Microsoft 365 with Teams and hybrid identity integration.',
+    extendedDescription: 'Upgraded devices from Windows 7 to Windows 10 using SCCM, created bare-metal builds for vendors, and deployed Office 365 with Microsoft Teams. Configured Azure AD Connect, assigned licenses, and optimized the environment for collaboration and productivity.',
+    tags: ['Microsoft 365', 'SCCM', 'Teams', 'Entra ID', 'Hybrid Identity']
   },
 ];
 
