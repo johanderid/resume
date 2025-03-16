@@ -74,7 +74,7 @@ export function Projects() {
           if (entry.isIntersecting) {
             entry.target.classList.add('active');
           } else {
-            entry.target.classList.remove('active'); // Reset when out of view
+            entry.target.classList.remove('active');
           }
         });
       },
@@ -87,7 +87,7 @@ export function Projects() {
     return () => {
       revealElements?.forEach((el) => observer.unobserve(el));
     };
-  }, [expandedProject]); // Re-run effect when expandedProject changes
+  }, [expandedProject, selectedTag]); // Added selectedTag to dependencies
 
   const toggleProjectDetails = (id: number) => {
     setExpandedProject(expandedProject === id ? null : id);
@@ -135,7 +135,6 @@ export function Projects() {
         </div>
 
         {expandedProject !== null ? (
-          // Expanded Project View
           filteredProjects
             .filter((project) => project.id === expandedProject)
             .map((project) => (
@@ -172,7 +171,6 @@ export function Projects() {
               </div>
             ))
         ) : (
-          // Grid View
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {filteredProjects.map((project, index) => (
               <div
