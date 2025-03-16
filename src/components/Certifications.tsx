@@ -37,37 +37,37 @@ const certifications: Certification[] = [
     title: 'Microsoft Certified: Azure Virtual Desktop Specialty',
     issuer: 'Microsoft',
     date: 'June 2021'
-  }
+  },
   {
     title: 'Microsoft Certified: Azure Administrator Associate',
     issuer: 'Microsoft',
     date: 'April 2021'
-  }
+  },
   {
     title: 'Microsoft 365 Certified: Administrator Expert',
     issuer: 'Microsoft',
     date: 'April 2020'
-  }
+  },
   {
     title: 'Microsoft 365 Certified: Endpoint Administrator Associate',
     issuer: 'Microsoft',
     date: 'August 2019'
-  }
+  },
   {
     title: 'Microsoft® Certified Solutions Expert: Mobility',
     issuer: 'Microsoft',
     date: 'March 2019'
-  }
+  },
   {
     title: 'Microsoft Certified Solutions Associate: Windows 10',
     issuer: 'Microsoft',
     date: 'March 2019'
-  }
+  },
   {
     title: 'Administering System Center Configuration Manager and Cloud Services Integration',
     issuer: 'Microsoft',
     date: 'November 2018'
-  }
+  },
   {
     title: 'Microsoft® Certified Technology Specialist: Administering and Deploying System Center 2012 Configuration Manager',
     issuer: 'Microsoft',
