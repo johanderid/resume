@@ -9,34 +9,69 @@ type Certification = {
 
 const certifications: Certification[] = [
   {
-    title: 'Microsoft Certified: Azure Solutions Architect Expert',
+    title: 'Microsoft Certified: Identity and Access Administrator Associate',
     issuer: 'Microsoft',
-    date: 'Oct 2022'
+    date: 'November 2024'
   },
   {
-    title: 'Microsoft 365 Certified: Enterprise Administrator Expert',
+    title: 'Microsoft Certified: Security Operations Analyst Associate',
     issuer: 'Microsoft',
-    date: 'May 2022'
+    date: 'July 2024'
   },
   {
-    title: 'Microsoft Certified: Azure Administrator Associate',
+    title: 'Microsoft Certified: Azure Security Engineer Associate',
     issuer: 'Microsoft',
-    date: 'Jan 2021'
+    date: 'December 2023'
   },
   {
-    title: 'Microsoft Certified: Intune Administrator Associate',
+    title: 'Microsoft Certified: Azure Network Engineer Associate',
     issuer: 'Microsoft',
-    date: 'Mar 2021'
+    date: 'September 2022'
+  },
+  {
+    title: 'Microsoft Certified: Windows Server Hybrid Administrator Associate',
+    issuer: 'Microsoft',
+    date: 'March 2022'
   },
   {
     title: 'Microsoft Certified: Azure Virtual Desktop Specialty',
     issuer: 'Microsoft',
-    date: 'Sep 2021'
-  },
+    date: 'June 2021'
+  }
   {
-    title: 'Microsoft Certified: Security Administrator Associate',
+    title: 'Microsoft Certified: Azure Administrator Associate',
     issuer: 'Microsoft',
-    date: 'Jul 2022'
+    date: 'April 2021'
+  }
+  {
+    title: 'Microsoft 365 Certified: Administrator Expert',
+    issuer: 'Microsoft',
+    date: 'April 2020'
+  }
+  {
+    title: 'Microsoft 365 Certified: Endpoint Administrator Associate',
+    issuer: 'Microsoft',
+    date: 'August 2019'
+  }
+  {
+    title: 'Microsoft® Certified Solutions Expert: Mobility',
+    issuer: 'Microsoft',
+    date: 'March 2019'
+  }
+  {
+    title: 'Microsoft Certified Solutions Associate: Windows 10',
+    issuer: 'Microsoft',
+    date: 'March 2019'
+  }
+  {
+    title: 'Administering System Center Configuration Manager and Cloud Services Integration',
+    issuer: 'Microsoft',
+    date: 'November 2018'
+  }
+  {
+    title: 'Microsoft® Certified Technology Specialist: Administering and Deploying System Center 2012 Configuration Manager',
+    issuer: 'Microsoft',
+    date: 'November 2013'
   }
 ];
 
