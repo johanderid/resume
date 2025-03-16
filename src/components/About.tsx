@@ -54,12 +54,12 @@ export function About() {
                 Microsoft technologies and best practices in cloud security and governance.
               </p>
 
-              {/* Achievement Paragraph with Award Icon */}
-              <div className="flex items-start mb-6">
+              {/* Achievement with Bigger Icon and Text Below */}
+              <div className="flex flex-col items-start mb-6">
                 <img
                   src="/award-icon.jpg"
                   alt="Technical Excellence Award"
-                  className="w-6 h-6 mr-2 flex-shrink-0 mt-1"
+                  className="w-12 h-12 mb-2"
                 />
                 <p className="text-gray-300">
                   In 2021, I received the <span className="font-semibold text-white">Technical Excellence Award for FYE2021</span> from Netsurit for my significant contributions to cloud projects, highlighting my expertise and impact in delivering innovative solutions.
