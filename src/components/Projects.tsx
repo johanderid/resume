@@ -5,7 +5,7 @@ type Project = {
   id: number;
   title: string;
   description: string;
-  extendedDescription: string; // New field for more details
+  extendedDescription: string;
   tags: string[];
 };
 
@@ -56,7 +56,7 @@ const projectsData: Project[] = [
 
 export function Projects() {
   const [selectedTag, setSelectedTag] = useState<string | null>(null);
-  const [expandedProject, setExpandedProject] = useState<number | null>(null); // Track expanded project
+  const [expandedProject, setExpandedProject] = useState<number | null>(null);
   const sectionRef = useRef<HTMLElement>(null);
 
   const allTags = Array.from(
@@ -88,7 +88,7 @@ export function Projects() {
   }, []);
 
   const toggleProjectDetails = (id: number) => {
-    setExpandedProject(expandedProject === id ? null : id); // Toggle: expand if collapsed, collapse if expanded
+    setExpandedProject(expandedProject === id ? null : id);
   };
 
   return (
@@ -101,87 +101,119 @@ export function Projects() {
           <p className="text-xl text-gray-300 max-w-2xl mx-auto mb-8">
             A showcase of my cloud consulting projects, demonstrating expertise in Microsoft cloud technologies and solutions.
           </p>
-          <div className="inline-flex flex-wrap justify-center gap-2 p-2 bg-gray-700/80 backdrop-blur-sm rounded-xl">
-            <button
-              onClick={() => setSelectedTag(null)}
-              className={cn(
-                "px-4 py-2 rounded-lg text-sm font-medium transition-all",
-                selectedTag === null
-                  ? "bg-gray-600 shadow-sm text-white"
-                  : "text-gray-300 hover:bg-gray-600/60"
-              )}
-            >
-              All
-            </button>
-            {allTags.map((tag) => (
+          {/* Hide tag filters when a project is expanded */}
+          {expandedProject === null && (
+            <div className="inline-flex flex-wrap justify-center gap-2 p-2 bg-gray-700/80 backdrop-blur-sm rounded-xl">
               <button
-                key={tag}
-                onClick={() => setSelectedTag(tag)}
+                onClick={() => setSelectedTag(null)}
                 className={cn(
                   "px-4 py-2 rounded-lg text-sm font-medium transition-all",
-                  selectedTag === tag
+                  selectedTag === null
                     ? "bg-gray-600 shadow-sm text-white"
                     : "text-gray-300 hover:bg-gray-600/60"
                 )}
               >
-                {tag}
+                All
               </button>
-            ))}
-          </div>
+              {allTags.map((tag) => (
+                <button
+                  key={tag}
+                  onClick={() => setSelectedTag(tag)}
+                  className={cn(
+                    "px-4 py-2 rounded-lg text-sm font-medium transition-all",
+                    selectedTag === tag
+                      ? "bg-gray-600 shadow-sm text-white"
+                      : "text-gray-300 hover:bg-gray-600/60"
+                  )}
+                >
+                  {tag}
+                </button>
+              ))}
+            </div>
+          )}
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {filteredProjects.map((project, index) => (
-            <div
-              key={project.id}
-              className="project-card reveal bg-gray-700 rounded-xl border border-gray-600"
-              style={{ animationDelay: `${(index % 3) * 0.2}s` }}
-            >
-              <div className="p-6">
-                <h3 className="text-xl font-bold mb-3 text-white">{project.title}</h3>
+        {/* Conditional Rendering: Expanded Project or Grid */}
+        {expandedProject !== null ? (
+          // Expanded Project View
+          filteredProjects
+            .filter((project) => project.id === expandedProject)
+            .map((project) => (
+              <div
+                key={project.id}
+                className="project-card bg-gray-700 rounded-xl border border-gray-600 w-full p-8 transition-all duration-300"
+              >
+                <h3 className="text-2xl font-bold mb-4 text-white">{project.title}</h3>
                 <p className="text-gray-300 mb-4">{project.description}</p>
-                
-                {/* Extended Description (shown when expanded) */}
-                {expandedProject === project.id && (
-                  <p className="text-gray-300 mb-4 transition-all duration-300">{project.extendedDescription}</p>
-                )}
-
-                <div className="flex flex-wrap gap-2 mb-4">
+                <p className="text-gray-300 mb-6">{project.extendedDescription}</p>
+                <div className="flex flex-wrap gap-2 mb-6">
                   {project.tags.map((tag) => (
                     <span
                       key={tag}
                       className={cn(
-                        "text-xs font-medium px-2.5 py-1 rounded-full",
-                        selectedTag === tag
-                          ? "bg-primary/20 text-primary"
-                          : "bg-gray-800 text-gray-300"
+                        "text-xs font-medium px-2.5 py-1 rounded-full bg-gray-800 text-gray-300"
                       )}
                     >
                       {tag}
                     </span>
                   ))}
                 </div>
-
                 <div className="flex justify-end">
                   <button
                     onClick={() => toggleProjectDetails(project.id)}
                     className="inline-flex items-center text-sm font-medium text-primary hover:text-primary/80 transition-colors"
                   >
-                    {expandedProject === project.id ? 'Read Less' : 'Read More'}
+                    Read Less
                     <svg className="ml-1 w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={2}
-                        d={expandedProject === project.id ? 'M6 18L18 6M6 6l12 12' : 'M14 5l7 7m0 0l-7 7m7-7H3'}
-                      />
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
                     </svg>
                   </button>
                 </div>
               </div>
-            </div>
-          ))}
-        </div>
+            ))
+        ) : (
+          // Grid View
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {filteredProjects.map((project, index) => (
+              <div
+                key={project.id}
+                className="project-card reveal bg-gray-700 rounded-xl border border-gray-600"
+                style={{ animationDelay: `${(index % 3) * 0.2}s` }}
+              >
+                <div className="p-6">
+                  <h3 className="text-xl font-bold mb-3 text-white">{project.title}</h3>
+                  <p className="text-gray-300 mb-4">{project.description}</p>
+                  <div className="flex flex-wrap gap-2 mb-4">
+                    {project.tags.map((tag) => (
+                      <span
+                        key={tag}
+                        className={cn(
+                          "text-xs font-medium px-2.5 py-1 rounded-full",
+                          selectedTag === tag
+                            ? "bg-primary/20 text-primary"
+                            : "bg-gray-800 text-gray-300"
+                        )}
+                      >
+                        {tag}
+                      </span>
+                    ))}
+                  </div>
+                  <div className="flex justify-end">
+                    <button
+                      onClick={() => toggleProjectDetails(project.id)}
+                      className="inline-flex items-center text-sm font-medium text-primary hover:text-primary/80 transition-colors"
+                    >
+                      Read More
+                      <svg className="ml-1 w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        )}
       </div>
     </section>
   );
