@@ -73,6 +73,8 @@ export function Projects() {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
             entry.target.classList.add('active');
+          } else {
+            entry.target.classList.remove('active'); // Reset when out of view
           }
         });
       },
@@ -85,7 +87,7 @@ export function Projects() {
     return () => {
       revealElements?.forEach((el) => observer.unobserve(el));
     };
-  }, []);
+  }, [expandedProject]); // Re-run effect when expandedProject changes
 
   const toggleProjectDetails = (id: number) => {
     setExpandedProject(expandedProject === id ? null : id);
@@ -101,7 +103,6 @@ export function Projects() {
           <p className="text-xl text-gray-300 max-w-2xl mx-auto mb-8">
             A showcase of my cloud consulting projects, demonstrating expertise in Microsoft cloud technologies and solutions.
           </p>
-          {/* Hide tag filters when a project is expanded */}
           {expandedProject === null && (
             <div className="inline-flex flex-wrap justify-center gap-2 p-2 bg-gray-700/80 backdrop-blur-sm rounded-xl">
               <button
@@ -133,7 +134,6 @@ export function Projects() {
           )}
         </div>
 
-        {/* Conditional Rendering: Expanded Project or Grid */}
         {expandedProject !== null ? (
           // Expanded Project View
           filteredProjects
